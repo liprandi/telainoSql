@@ -32,6 +32,7 @@ set(PROJECT_SOURCES
         telainoSql.qrc
         ${TS_FILES}
 )
+set(APP_ICON_RESOURCE_WINDOWS "${CMAKE_CURRENT_SOURCE_DIR}/telainoSql.rc")
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(telainoSql MANUAL_FINALIZATION ${PROJECT_SOURCES})
@@ -49,9 +50,9 @@ else()
 #    set(ANDROID_PACKAGE_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/android")
     else()
         if(WIN32)
-            add_executable(telainoSql WIN32 ${PROJECT_SOURCES})
+            add_executable(telainoSql WIN32 ${PROJECT_SOURCES} ${APP_ICON_RESOURCE_WINDOWS})
         else()
-            add_executable(telainoSql ${PROJECT_SOURCES})
+            add_executable(telainoSql ${PROJECT_SOURCES} ${APP_ICON_RESOURCE_WINDOWS})
         endif()
     endif()
 

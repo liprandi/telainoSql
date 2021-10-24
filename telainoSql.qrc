@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/icon">
+        <file alias="cam">resource/cam.png</file>
+        <file alias="camFault">resource/camFault.png</file>
+        <file alias="camWarning">resource/camWarning.png</file>
+    </qresource>
+</RCC>

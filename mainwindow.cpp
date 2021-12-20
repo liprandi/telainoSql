@@ -28,6 +28,7 @@ MainWindow::MainWindow(QWidget *parent)
     m_plcDbWriteSize = m_settings.value("plc/db_write_size", 128).toInt();
     m_plc.setAddress(m_plcAddress, m_plcRack, m_plcSlot);
     m_data =  new unsigned char[m_plcDbWriteSize];
+    memset(m_data, 0, m_plcDbWriteSize);
     m_cycle =  new Cycle(&m_settings);
     ui->setupUi(this);
 
